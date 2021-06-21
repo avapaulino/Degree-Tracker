@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>GPA table</title>
+    <title>Courses</title>
 
     <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -131,11 +131,14 @@
             </li>
 
             <!-- Nav Item - Tables -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="tables.html">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Final Grade</span></a>
-            </li><li class="nav-item active">
+            </li>
+
+            <!-- Nav Item - Courses -->
+            <li class="nav-item active">
                 <a class="nav-link" href="courses.html">
                     <i class="fas fa-fw fa-book"></i>
                     <span>Courses</span></a>
@@ -276,8 +279,7 @@
                                 </h6>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_1.svg"
-                                            alt="...">
+                                        <img class="rounded-circle" src="img/undraw_profile_1.svg" alt="...">
                                         <div class="status-indicator bg-success"></div>
                                     </div>
                                     <div class="font-weight-bold">
@@ -288,8 +290,7 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_2.svg"
-                                            alt="...">
+                                        <img class="rounded-circle" src="img/undraw_profile_2.svg" alt="...">
                                         <div class="status-indicator"></div>
                                     </div>
                                     <div>
@@ -300,8 +301,7 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_3.svg"
-                                            alt="...">
+                                        <img class="rounded-circle" src="img/undraw_profile_3.svg" alt="...">
                                         <div class="status-indicator bg-warning"></div>
                                     </div>
                                     <div>
@@ -333,8 +333,7 @@
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -368,155 +367,199 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Final Grade</h1>
+                    <h1 class="h3 mb-2 text-gray-800">Courses</h1>
                     <p class="mb-4"></p>
+
+                    <!-- Course Tabs -->
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a class="nav-link active" data-toggle="tab" href="#courses">Courses</a></li>
+                        <li><a class="nav-link" data-toggle="tab" href="#requirements">Requirements</a></li>
+                    </ul>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Course List</h6>
-                        </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>Course number</th>
-                                            <th>Course name</th>
-                                            <th>CRN</th>
-                                            <th>Professor</th>
-                                            <th>Term</th>
-                                            <th>GPA</th>
-                                            <th>Letter grade</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>Course number</th>
-                                            <th>Course name</th>
-                                            <th>CRN</th>
-                                            <th>Professor</th>
-                                            <th>Term</th>
-                                            <th>GPA</th>
-                                            <th>Letter grade</th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        <tr>
-                                            <td>CSCI 4140</td>
-                                            <td>Advanced Database Systems</td>
-                                            <td>30395</td>
-                                            <td>Dr. Christain Gang Liu</td>
-                                            <td>2020/2021 Fall</td>
-                                            <td>4.0</td>
-                                            <td>A</td>
-                                        </tr>
-                                        <tr>
-                                            <td>CSCI 4145</td>
-                                            <td>Cloud computing</td>
-                                            <td>30397</td>
-                                            <td>Dr. Jaume Manero</td>
-                                            <td>2020/2021 Fall</td>
-                                            <td>4.3</td>
-                                            <td>A+</td>
-                                        </tr>
-                                        <tr>
-                                            <td>CSCI 3162</td>
-                                            <td>Digital Media</td>
-                                            <td>20727</td>
-                                            <td></td>
-                                            <td>2020/2021 Winter</td>
-                                            <td>3.3</td>
-                                            <td>B+</td>
-                                        </tr>
-                                        <tr>
-                                            <td>CSCI 4166</td>
-                                            <td>Visualization</td>
-                                            <td>20745</td>
-                                            <td></td>
-                                            <td>2020/2021 Winter</td>
-                                            <td>3.7</td>
-                                            <td>A-</td>
-                                        </tr>
-                                        <tr>
-                                            <td>CSCI 3110</td>
-                                            <td>Dsgn. & Anal. of Algorithms I.</td>
-                                            <td>10811</td>
-                                            <td></td>
-                                            <td>2020/2021 Summer</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                        <div class="tab-content">
+                            <div id="courses" class="tab-pane fade show active">
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                            <thead>
+                                                <tr>
+                                                    <th>Course Name</th>
+                                                    <th>Year</th>
+                                                    <th>Term</th>
+                                                    <th>Group</th>
+                                                    <th>Completed</th>
+                                                    <th>Letter Grade</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>CSCI 1110</td>
+                                                    <td>1</td>
+                                                    <td>Fall 2018</td>
+                                                    <td>Core Courses</td>
+                                                    <td>Yes</td>
+                                                    <td>A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>CSCI 3110</td>
+                                                    <td>3</td>
+                                                    <td>Fall 2021</td>
+                                                    <td>Core Courses</td>
+                                                    <td>No</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>MATH 2001</td>
+                                                    <td>3</td>
+                                                    <td>Summer 2021</td>
+                                                    <td>Elective Courses</td>
+                                                    <td>No</td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="requirements" class="tab-pane fade">
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                            <thead>
+                                                <tr>
+                                                    <th>Requirement</th>
+                                                    <th>Amount</th>
+                                                    <th>Courses</th>
+                                                    <th>Completed</th>
+                                                    <th>Needed</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Core Courses</td>
+                                                    <td>15</td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-success btn-small" data-toggle="modal" data-target="#courseWindow">CSCI
+                                                            1110</button>
+                                                        <button type="button" class="btn btn-success btn-small">CSCI
+                                                            1170</button>
+                                                        <button type="button" class="btn btn-success btn-small">CSCI
+                                                            1800</button>
+                                                        <button type="button" class="btn btn-success btn-small">CSCI
+                                                            1801</button>
+                                                        <button type="button" class="btn btn-success btn-small">CSCI
+                                                            2100</button>
+                                                        <button type="button" class="btn btn-success btn-small">CSCI
+                                                            2110</button>
+                                                        <button type="button" class="btn btn-success btn-small">CSCI
+                                                            2122</button>
+                                                        <button type="button" class="btn btn-success btn-small">CSCI
+                                                            2134</button>
+                                                        <button type="button" class="btn btn-success btn-small">CSCI
+                                                            2141</button>
+                                                        <button type="button" class="btn btn-success btn-small">CSCI
+                                                            3101</button>
+                                                        <button type="button"
+                                                            class="btn btn-outline-danger btn-small">CSCI 3110</button>
+                                                        <button type="button" class="btn btn-success btn-small">CSCI
+                                                            3120</button>
+                                                        <button type="button" class="btn btn-success btn-small">CSCI
+                                                            3130</button>
+                                                        <button type="button"
+                                                            class="btn btn-outline-danger btn-small">CSCI 3136</button>
+                                                        <button type="button"
+                                                            class="btn btn-outline-danger btn-small">CSCI 3171</button>
+                                                    </td>
+                                                    <td>12</td>
+                                                    <td>3</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Math Courses</td>
+                                                    <td>4</td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-success btn-small">MATH
+                                                            1000</button>
+                                                        <button type="button" class="btn btn-success btn-small">MATH
+                                                            1030</button>
+                                                        <button type="button" class="btn btn-success btn-small">MATH
+                                                            2112</button>
+                                                        <button type="button" class="btn btn-success btn-small">STAT
+                                                            2060</button>
+                                                    </td>
+                                                    <td>4</td>
+                                                    <td>0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Science with Labs</td>
+                                                    <td>2</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Humanities/Social Sciences</td>
+                                                    <td>1</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Business, Economics, Science or Engineering</td>
+                                                    <td>3</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Elective Courses</td>
+                                                    <td>8</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>CS Elective Courses</td>
+                                                    <td>5</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="modal fade" id="courseWindow" tabindex="-1" role="dialog"
+                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">CSCI 1110 - Intro to Computer Science</h5>
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        Course information...
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                </div>
 
-                
-                <!-- /.container-fluid -->
+                    <!-- /.container-fluid -->
 
-            </div>
-
-            <div class="container-fluid">
-
-                <!-- DataTales Example -->
-                <div class="card shadow mb-4">
-                    <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">Summary</h6>
-                    </div>
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        <th>Attempted</th>
-                                        <th>Earned</th>
-                                        <th>GPA hours</th>
-                                        <th>GPA</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th>Current term:</th>
-                                        <td>6.000</td>
-                                        <td>6.000</td>
-                                        <td>6.000</td>
-                                        <td>2.15</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Cumulative:</th>
-                                        <td>123.000</td>
-                                        <td>123.000</td>
-                                        <td>117.000</td>
-                                        <td>3.10</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Transfer:</th>
-                                        <td>0.000</td>
-                                        <td>0.000</td>
-                                        <td>0.00</td>
-                                        <td>0.00</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Overall:</th>
-                                        <td>123.000</td>
-                                        <td>123.000</td>
-                                        <td>117.000</td>
-                                        <td>3.10</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
                 </div>
             </div>
-
-            <!-- /.container-fluid -->
-        </div>
 
             <!-- End of Main Content -->
 
