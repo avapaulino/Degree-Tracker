@@ -23,6 +23,8 @@
     <!-- Custom styles for this page -->
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.7.16.min.js"></script>
+
 </head>
 
 <body id="page-top">
@@ -146,7 +148,6 @@
                                             <thead>
                                                 <tr>
                                                     <th>Course Name</th>
-                                                    <th>Year</th>
                                                     <th>Term</th>
                                                     <th>Group</th>
                                                     <th>Completed</th>
@@ -155,16 +156,14 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>CSCI 1110</td>
-                                                    <td>1</td>
-                                                    <td>Fall 2018</td>
-                                                    <td>Core Courses</td>
-                                                    <td>Yes</td>
-                                                    <td>A</td>
+                                                    <td id="courseName">CSCI 1110</td>
+                                                    <td id="term">Fall 2018</td>
+                                                    <td id="category">Core Courses</td>
+                                                    <td id="completed">Yes</td>
+                                                    <td id="grade">A</td>
                                                 </tr>
                                                 <tr>
                                                     <td>CSCI 3110</td>
-                                                    <td>3</td>
                                                     <td>Fall 2021</td>
                                                     <td>Core Courses</td>
                                                     <td>No</td>
@@ -172,7 +171,6 @@
                                                 </tr>
                                                 <tr>
                                                     <td>MATH 2001</td>
-                                                    <td>3</td>
                                                     <td>Summer 2021</td>
                                                     <td>Elective Courses</td>
                                                     <td>No</td>
