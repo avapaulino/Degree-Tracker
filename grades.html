@@ -156,52 +156,8 @@
                                             <th>Letter grade</th>
                                         </tr>
                                     </tfoot>
-                                    <tbody>
-                                        <tr>
-                                            <td>CSCI 4140</td>
-                                            <td>Advanced Database Systems</td>
-                                            <td>30395</td>
-                                            <td>Dr. Christain Gang Liu</td>
-                                            <td>2020/2021 Fall</td>
-                                            <td>4.0</td>
-                                            <td>A</td>
-                                        </tr>
-                                        <tr>
-                                            <td>CSCI 4145</td>
-                                            <td>Cloud computing</td>
-                                            <td>30397</td>
-                                            <td>Dr. Jaume Manero</td>
-                                            <td>2020/2021 Fall</td>
-                                            <td>4.3</td>
-                                            <td>A+</td>
-                                        </tr>
-                                        <tr>
-                                            <td>CSCI 3162</td>
-                                            <td>Digital Media</td>
-                                            <td>20727</td>
-                                            <td></td>
-                                            <td>2020/2021 Winter</td>
-                                            <td>3.3</td>
-                                            <td>B+</td>
-                                        </tr>
-                                        <tr>
-                                            <td>CSCI 4166</td>
-                                            <td>Visualization</td>
-                                            <td>20745</td>
-                                            <td></td>
-                                            <td>2020/2021 Winter</td>
-                                            <td>3.7</td>
-                                            <td>A-</td>
-                                        </tr>
-                                        <tr>
-                                            <td>CSCI 3110</td>
-                                            <td>Dsgn. & Anal. of Algorithms I.</td>
-                                            <td>10811</td>
-                                            <td></td>
-                                            <td>2020/2021 Summer</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
+                                    <tbody id="actualCourse">
+                                        
                                     </tbody>
                                 </table>
                             </div>
@@ -224,7 +180,7 @@
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <table class="table table-bordered" id="dataTable2" width="100%" cellspacing="0">
                                 <thead>
                                     <tr>
                                         <th></th>
@@ -331,6 +287,8 @@
     <!-- Page level custom scripts -->
     <script src="static/js/datatables-demo.js"></script>
 
+    <!-- get JSON data from db-->>
+    <script type="text/javascript" src="./static/js/getGrade.js"></script>
 </body>
 
 </html>
