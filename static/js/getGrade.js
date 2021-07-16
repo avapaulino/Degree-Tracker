@@ -1,15 +1,12 @@
 $.ajax({
     type: 'GET',
     async: false,
-    url:'https://ivn16pu4qd.execute-api.us-east-1.amazonaws.com/default/get-student?Banner_id=712744',
-    headers:{
-        'x-api-key': 'WIdtgv8hE75mdwKNnPIByt1HbE3T01l25NCQtaWf'
-    },
+    url:'http://127.0.0.1:5000/grades/712744',
     crossDomain: 'true',
     dataType: 'json'
 })
 .done(function(data) {
-    let json = JSON.parse(data.body);
+    let json = JSON.parse(data.body.body);
     let course = json.Item.Courses_taken;
     if (console && console.log) {
         console.log(json);
