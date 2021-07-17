@@ -1,16 +1,16 @@
 $.ajax({
     type: 'GET',
     async: false,
-    url:'http://localhost:5000/grades/712744',
+    url:'http://18.234.255.150:5000/grades/712744',
     crossDomain: 'true',
     dataType: 'json'
 })
 .done(function(data) {
     let json = JSON.parse(data.body.body);
-    let course = json.Item.Courses_taken;
+    let course = json[0].Courses_taken;
     if (console && console.log) {
-        console.log(json);
-        console.log(json.Item.Courses_taken);
+        console.log(json[0]);
+        console.log(json[0].Courses_taken);
         console.log($('#actualCourse')[0]);
     }
     $.each(course, function(i) {
