@@ -1,12 +1,13 @@
 $.ajax({
     type: 'GET',
     async: false,
-    url:'http://18.234.255.150:5000/grades/712744',
+    url:'http://3.94.37.105:5000/grades/712744',
     crossDomain: 'true',
     dataType: 'json'
 })
-.done(function(data) {
-    let json = JSON.parse(data.body.body);
+.done(function(data) { 
+    console.log(data.body);
+    let json = JSON.parse(data.body);
     let course = json[0].Courses_taken;
     if (console && console.log) {
         console.log(json[0]);
