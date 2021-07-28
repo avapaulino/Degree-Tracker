@@ -6,17 +6,28 @@ $.ajax({
     dataType: 'json'
 })
 .done(function(data) { 
-    console.log(data.body);
+    // console.log(data.body);
+    
+    // data.body is returning actual data as string
+    // JSON.parse turn String to JSON 
     let json = JSON.parse(data.body);
+    // In grade page, only data in Courses_taken will be used
     let course = json[0].Courses_taken;
+
+
     if (console && console.log) {
         console.log(json[0]);
         console.log(json[0].Courses_taken);
         console.log($('#actualCourse')[0]);
+        console.log(course[0].Tag);
     }
+
+
     $.each(course, function(i) {
+        // appending body to #actualCourse
         $('#actualCourse').append(
             $("<tr></tr>")
+            // lines to add data in to table on UI
                 .append($("<td></td>").text("" + course[i].Tag + " " + course[i].Number + ""))
                 .append($("<td></td>").text("" + course[i].Name + ""))
                 .append($("<td></td>").text("" + course[i].CRN + ""))
