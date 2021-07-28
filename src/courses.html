@@ -12,16 +12,21 @@
     <title>Courses</title>
 
     <!-- Custom fonts for this template -->
-    <link href="./static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="./static/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="static/css/sb-admin-2.min.css" rel="stylesheet">
 
     <!-- Custom styles for this page -->
-    <link href="./static/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="static/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src="courses.js"></script> -->
+    <script src="./static/js/getCourses.js"></script>
 
 </head>
 
@@ -29,9 +34,9 @@
 
     <!-- Page Wrapper -->
     <div id="wrapper">
-  
-            <!-- Nav Item - Pages Collapse Menu -->
-            
+
+        <!-- Nav Item - Pages Collapse Menu -->
+
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
@@ -42,23 +47,23 @@
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
-                    <li class="navbar-nav ml-auto"  no-arrow mx-1">
+                    <li class="navbar-nav ml-auto" no-arrow mx-1">
                         <a class="nav-link align-items-left" href="/">
                             <span>Dashboard</span></a>
                     </li>
 
 
-                    <li class="navbar-nav ml-auto"  no-arrow mx-1">
+                    <li class="navbar-nav ml-auto" no-arrow mx-1">
                         <a class="nav-link align-items-left" href="grades.html">
                             <span>Final Grade</span></a>
                     </li>
-                    
+
                     <!-- Nav Item - Courses-->
                     <li class="navbar-nav ml-auto no-arrow mx-1">
                         <a class="nav-link" href="courses.html">
                             <span>Courses</span></a>
                     </li>
-                    
+
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
@@ -95,9 +100,9 @@
                                         <span class="font-weight-bold">A new monthly report is ready to download!</span>
                                     </div>
                                 </a>
-                             
+
                         </li>
-                        
+
                         <div class="topbar-divider d-none d-sm-block"></div>
 
                         <!-- Nav Item - User Information -->
@@ -151,31 +156,8 @@
                                                     <th>Letter Grade</th>
                                                 </tr>
                                             </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>CSCI 1110</td>
-                                                    <td>1</td>
-                                                    <td>Fall 2018</td>
-                                                    <td>Core Courses</td>
-                                                    <td>Yes</td>
-                                                    <td>A</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>CSCI 3110</td>
-                                                    <td>3</td>
-                                                    <td>Fall 2021</td>
-                                                    <td>Core Courses</td>
-                                                    <td>No</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>MATH 2001</td>
-                                                    <td>3</td>
-                                                    <td>Summer 2021</td>
-                                                    <td>Elective Courses</td>
-                                                    <td>No</td>
-                                                    <td></td>
-                                                </tr>
+                                            <tbody id="get_courses">
+
                                             </tbody>
                                         </table>
                                     </div>
@@ -199,36 +181,66 @@
                                                     <td>Core Courses</td>
                                                     <td>15</td>
                                                     <td>
-                                                        <button type="button" class="btn btn-success btn-small" data-toggle="modal" data-target="#courseWindow">CSCI
-                                                            1110</button>
-                                                        <button type="button" class="btn btn-success btn-small">CSCI
-                                                            1170</button>
-                                                        <button type="button" class="btn btn-success btn-small">CSCI
-                                                            1800</button>
-                                                        <button type="button" class="btn btn-success btn-small">CSCI
-                                                            1801</button>
-                                                        <button type="button" class="btn btn-success btn-small">CSCI
-                                                            2100</button>
-                                                        <button type="button" class="btn btn-success btn-small">CSCI
-                                                            2110</button>
-                                                        <button type="button" class="btn btn-success btn-small">CSCI
-                                                            2122</button>
-                                                        <button type="button" class="btn btn-success btn-small">CSCI
-                                                            2134</button>
-                                                        <button type="button" class="btn btn-success btn-small">CSCI
-                                                            2141</button>
-                                                        <button type="button" class="btn btn-success btn-small">CSCI
-                                                            3101</button>
-                                                        <button type="button"
-                                                            class="btn btn-outline-danger btn-small">CSCI 3110</button>
-                                                        <button type="button" class="btn btn-success btn-small">CSCI
-                                                            3120</button>
-                                                        <button type="button" class="btn btn-success btn-small">CSCI
-                                                            3130</button>
-                                                        <button type="button"
-                                                            class="btn btn-outline-danger btn-small">CSCI 3136</button>
-                                                        <button type="button"
-                                                            class="btn btn-outline-danger btn-small">CSCI 3171</button>
+                                                        <button type="button" class="btn btn-success btn-small"
+                                                            data-toggle="modal" data-target="#csci1110">
+                                                            CSCI 1110
+                                                        </button>
+                                                        <button type="button" class="btn btn-success btn-small"
+                                                            data-toggle="modal" data-target="#csci1170">
+                                                            CSCI 1170
+                                                        </button>
+                                                        <button type="button" class="btn btn-success btn-small"
+                                                            data-toggle="modal" data-target="#csci1800">
+                                                            CSCI 1800
+                                                        </button>
+                                                        <button type="button" class="btn btn-success btn-small"
+                                                            data-toggle="modal" data-target="#csci1801">
+                                                            CSCI 1801
+                                                        </button>
+                                                        <button type="button" class="btn btn-success btn-small"
+                                                            data-toggle="modal" data-target="#csci2100">
+                                                            CSCI 2100
+                                                        </button>
+                                                        <button type="button" class="btn btn-success btn-small"
+                                                            data-toggle="modal" data-target="#csci2110">
+                                                            CSCI 2110
+                                                        </button>
+                                                        <button type="button" class="btn btn-success btn-small"
+                                                            data-toggle="modal" data-target="#csci2122">
+                                                            CSCI 2122
+                                                        </button>
+                                                        <button type="button" class="btn btn-success btn-small"
+                                                            data-toggle="modal" data-target="#csci2134">
+                                                            CSCI 2134
+                                                        </button>
+                                                        <button type="button" class="btn btn-success btn-small"
+                                                            data-toggle="modal" data-target="#csci2141">
+                                                            CSCI 2141
+                                                        </button>
+                                                        <button type="button" class="btn btn-success btn-small"
+                                                            data-toggle="modal" data-target="#csci3101">
+                                                            CSCI 3101
+                                                        </button>
+                                                        <button type="button" class="btn btn-success btn-small"
+                                                            data-toggle="modal" data-target="#csci3110">
+                                                            CSCI 3110
+                                                        </button>
+                                                        <button type="button" class="btn btn-success btn-small"
+                                                            data-toggle="modal" data-target="#csci3120">
+                                                            CSCI 3120
+                                                        </button>
+                                                        <button type="button" class="btn btn-success btn-small"
+                                                            data-toggle="modal" data-target="#csci3130">
+                                                            CSCI 3130
+                                                        </button>
+                                                        <button type="button" class="btn btn-success btn-small"
+                                                            data-toggle="modal" data-target="#csci3136">
+                                                            CSCI 3136
+                                                        </button>
+                                                        <button type="button" class="btn btn-success btn-small"
+                                                            data-toggle="modal" data-target="#csci3171">
+                                                            CSCI 3171
+                                                        </button>
                                                     </td>
                                                     <td>12</td>
                                                     <td>3</td>
@@ -237,14 +249,22 @@
                                                     <td>Math Courses</td>
                                                     <td>4</td>
                                                     <td>
-                                                        <button type="button" class="btn btn-success btn-small">MATH
-                                                            1000</button>
-                                                        <button type="button" class="btn btn-success btn-small">MATH
-                                                            1030</button>
-                                                        <button type="button" class="btn btn-success btn-small">MATH
-                                                            2112</button>
-                                                        <button type="button" class="btn btn-success btn-small">STAT
-                                                            2060</button>
+                                                        <button type="button" class="btn btn-success btn-small"
+                                                            data-toggle="modal" data-target="#math1000">
+                                                            MATH 1000
+                                                        </button>
+                                                        <button type="button" class="btn btn-success btn-small"
+                                                            data-toggle="modal" data-target="#math1030">
+                                                            MATH 1030
+                                                        </button>
+                                                        <button type="button" class="btn btn-success btn-small"
+                                                            data-toggle="modal" data-target="#math2112">
+                                                            MATH 2112
+                                                        </button>
+                                                        <button type="button" class="btn btn-success btn-small"
+                                                            data-toggle="modal" data-target="#stat2060">
+                                                            STAT 2060
+                                                        </button>
                                                     </td>
                                                     <td>4</td>
                                                     <td>0</td>
@@ -286,19 +306,107 @@
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        <div class="modal fade" id="courseWindow" tabindex="-1" role="dialog"
+
+                                        <!-- CSCI 1110 -->
+                                        <div class="modal fade" id="csci1110" tabindex="-1" role="dialog"
                                             aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalLabel">CSCI 1110 - Intro to Computer Science</h5>
+                                                        <h5 class="modal-title" id="exampleModalLabel">Intro to Computer
+                                                            Science</h5>
                                                         <button type="button" class="close" data-dismiss="modal"
                                                             aria-label="Close">
                                                             <span aria-hidden="true">&times;</span>
                                                         </button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        Course information...
+                                                        <p>Code: CSCI 1110</p>
+                                                        <p>Term: Fall 2018</p>
+                                                        <p>Category: Core Coures</p>
+                                                        <p>Completed: Yes</p>
+                                                        <p>Letter Grade: A</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- CSCI 1170 -->
+                                        <div class="modal fade" id="csci1170" tabindex="-1" role="dialog"
+                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Intro to Web
+                                                            Design & Development</h5>
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>Code: CSCI 1170</p>
+                                                        <p>Term: Fall 2018</p>
+                                                        <p>Category: Core Coures</p>
+                                                        <p>Completed: Yes</p>
+                                                        <p>Letter Grade: A-</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- CSCI 1800 -->
+                                        <div class="modal fade" id="csci1800" tabindex="-1" role="dialog"
+                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Society Tech
+                                                            before Automation</h5>
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>Code: CSCI 1800</p>
+                                                        <p>Term: Fall 2018</p>
+                                                        <p>Category: Core Coures</p>
+                                                        <p>Completed: Yes</p>
+                                                        <p>Letter Grade: B</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- CSCI 1801 -->
+                                        <div class="modal fade" id="csci1801" tabindex="-1" role="dialog"
+                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Case Studies in
+                                                            Comp & Society</h5>
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>Code: CSCI 1801</p>
+                                                        <p>Term: Winter 2020</p>
+                                                        <p>Category: Core Coures</p>
+                                                        <p>Completed: Yes</p>
+                                                        <p>Letter Grade: B+</p>
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary"
@@ -363,20 +471,20 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="./static/vendor/jquery/jquery.min.js"></script>
-    <script src="./static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="static/vendor/jquery/jquery.min.js"></script>
+    <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="./static/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="static/vendor/jquery-easing/jquery.easing.min.js"></script>
 
 
 
     <!-- Page level plugins -->
-    <script src="./static/vendor/datatables/jquery.dataTables.min.js"></script>
-    <script src="./static/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="static/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="static/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="./static/js/datatables-demo.js"></script>
+    <script src="static/js/datatables-demo.js"></script>
 
 </body>
 
