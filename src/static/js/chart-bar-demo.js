@@ -7,13 +7,13 @@ var ctx = document.getElementById("myBarCharts");
 var myBarChart = new Chart(ctx, {
   type: 'bar',
   data: {
-    labels: ["Math", "Computer Science", "Sciences", "Electives 1000+", "Electives 2000+", "Electives 3000+"],
+    labels: ["Core CS 1000", "Core CS 2000", "Core CS 3000", "Electives 1000+", "Electives 2000+", "Electives 3000+", "Math", "Science"],
     datasets: [{
       label: "Grade",
       backgroundColor: "#4e73df",
       hoverBackgroundColor: "#2e59d9",
       borderColor: "#4e73df",
-      data: [3.7, 3.8, 4, 4.3, 2.9, 4],
+      data: [3.4, 3, 0, 3.2, 2, 4, 4.3, 3.7],
     }],
   },
   options: {
@@ -36,7 +36,7 @@ var myBarChart = new Chart(ctx, {
           drawBorder: false
         },
         ticks: {
-          maxTicksLimit: 6
+          autoSkip: false
         },
         maxBarThickness: 25,
       }],

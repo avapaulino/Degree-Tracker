@@ -38,20 +38,20 @@ $.ajax({
             $("<h4 class=\"small font-weight-bold\"></h4>").text("Core CS 2000")
                 .append($("<span class=\"float-right\"></span>").text("" + courseCategory["Corse CS 2000"] + "%")),
             $("<div class=\"progress mb-4\"></div>")
-                .append("<div class=\"progress-bar bg-dark\" role=\"progressbar\" style=\"width: " + courseCategory["Corse CS 2000"] + "%\" aria-valuenow=" + courseCategory["Corse CS 2000"] + " aria-valuemin=\"0\" aria-valuemax=\"100\"></div>"),
+                .append("<div class=\"progress-bar bg-purple\" role=\"progressbar\" style=\"width: " + courseCategory["Corse CS 2000"] + "%\" aria-valuenow=" + courseCategory["Corse CS 2000"] + " aria-valuemin=\"0\" aria-valuemax=\"100\"></div>"),
             $("<h4 class=\"small font-weight-bold\"></h4>").text("Core CS 3000")
                 .append($("<span class=\"float-right\"></span>").text("" + courseCategory["Corse CS 3000"] + "%")),
             $("<div class=\"progress mb-4\"></div>")
-                .append("<div class=\"progress-bar bg-success\" role=\"progressbar\" style=\"width: " + courseCategory["Corse CS 3000"] + "%\" aria-valuenow=" + courseCategory["Corse CS 3000"] + " aria-valuemin=\"0\" aria-valuemax=\"100\"></div>"),
-            $("<h4 class=\"small font-weight-bold\"></h4>").text("CS Electives 1000+")
+                .append("<div class=\"progress-bar bg-orange\" role=\"progressbar\" style=\"width: " + courseCategory["Corse CS 3000"] + "%\" aria-valuenow=" + courseCategory["Corse CS 3000"] + " aria-valuemin=\"0\" aria-valuemax=\"100\"></div>"),
+            $("<h4 class=\"small font-weight-bold\"></h4>").text("Electives 1000+")
                 .append($("<span class=\"float-right\"></span>").text("" + courseCategory["CS Electives 1000+"] + "%")),
             $("<div class=\"progress mb-4\"></div>")
-                .append("<div class=\"progress-bar bg-danger\" role=\"progressbar\" style=\"width: " + courseCategory["CS Electives 1000+"] + "%\" aria-valuenow=" + courseCategory["CS Electives 1000+"] + " aria-valuemin=\"0\" aria-valuemax=\"100\"></div>"),
-            $("<h4 class=\"small font-weight-bold\"></h4>").text("CS Electives 2000+")
+                .append("<div class=\"progress-bar bg-warning\" role=\"progressbar\" style=\"width: " + courseCategory["CS Electives 1000+"] + "%\" aria-valuenow=" + courseCategory["CS Electives 1000+"] + " aria-valuemin=\"0\" aria-valuemax=\"100\"></div>"),
+            $("<h4 class=\"small font-weight-bold\"></h4>").text("Electives 2000+")
                 .append($("<span class=\"float-right\"></span>").text("" + courseCategory["CS Electives 2000+"] + "%")),
             $("<div class=\"progress mb-4\"></div>")
-                .append("<div class=\"progress-bar bg-warning\" role=\"progressbar\" style=\"width: " + courseCategory["CS Electives 2000+"] + "%\" aria-valuenow=" + courseCategory["CS Electives 2000+"] + " aria-valuemin=\"0\" aria-valuemax=\"100\"></div>"),
-            $("<h4 class=\"small font-weight-bold\"></h4>").text("CS Electives 3000+")
+                .append("<div class=\"progress-bar bg-danger\" role=\"progressbar\" style=\"width: " + courseCategory["CS Electives 2000+"] + "%\" aria-valuenow=" + courseCategory["CS Electives 2000+"] + " aria-valuemin=\"0\" aria-valuemax=\"100\"></div>"),
+            $("<h4 class=\"small font-weight-bold\"></h4>").text("Electives 3000+")
                 .append($("<span class=\"float-right\"></span>").text("" + courseCategory["CS Electives 3000+"] + "%")),
             $("<div class=\"progress mb-4\"></div>")
                 .append("<div class=\"progress-bar bg-secondary\" role=\"progressbar\" style=\"width: " + courseCategory["CS Electives 3000+"] + "%\" aria-valuenow=" + courseCategory["CS Electives 3000+"] + " aria-valuemin=\"0\" aria-valuemax=\"100\"></div>"),
@@ -64,23 +64,6 @@ $.ajax({
             $("<div class=\"progress mb-4\"></div>")
                 .append("<div class=\"progress-bar bg-info\" role=\"progressbar\" style=\"width: " + courseCategory["Sciences"] + "%\" aria-valuenow=" + courseCategory["Sciences"] + " aria-valuemin=\"0\" aria-valuemax=\"100\"></div>")
         );
-        // $.each(course, function(i) {
-        //     if(course[i].Completed==true){
-        //         var comp = "Yes";
-        //     }
-        //     else{
-        //         var comp = "No";
-        //     }
-        //     $('#get_courses').append(
-        //         $("<tr></tr>")
-        //             .append($("<td></td>").text("" + course[i].Name + ""))
-        //             .append($("<td></td>").text("" + course[i].Year + ""))
-        //             .append($("<td></td>").text("" + course[i].Term + ""))
-        //             .append($("<td></td>").text("" + course[i].Category + ""))
-        //             .append($("<td></td>").text("" + comp + ""))
-        //             .append($("<td></td>").text("" + course[i].Letter_Grade + ""))
-        //     ); 
-        // });
     })
     .fail(function () {
         alert("error");
