@@ -1,18 +1,15 @@
 $.ajax({
     type: 'GET',
     async: false,
-    url:'http://3.94.37.105:5000/grades/712746',
+    url:'http://3.94.37.105:5000/grades/712744',
     crossDomain: 'true',
     dataType: 'json'
 })
 .done(function(data) { 
-    console.log(data.body);
+    //console.log(data.body);
     let json = JSON.parse(data.body);
-    let course = json[0];
-    if (console && console.log) {
-        console.log($('#get_courses')[0]);
-    }
-    console.log(course)
+    let course = json[0].Courses_taken;
+    
     $.each(course, function(i) {
         if(course[i].Completed==true){
             var comp = "Yes";
