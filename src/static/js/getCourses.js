@@ -10,6 +10,9 @@ $.ajax({
     let json = JSON.parse(data.body);
     let course = json[0].Courses_taken;
     
+    $('#name').text(json[0].Name);
+    console.log(json[0].Name);
+
     $.each(course, function(i) {
         if(course[i].Completed==true){
             var comp = "Yes";

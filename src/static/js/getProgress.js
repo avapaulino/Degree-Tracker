@@ -1,7 +1,11 @@
 $.ajax({
     type: 'GET',
     async: false,
+<<<<<<< HEAD
     url: 'http://3.94.37.105:5000/get-student/712744',
+=======
+    url: 'http://3.94.37.105:5000/get-student/712746',
+>>>>>>> 5f20e3b3c722749d2c0c80a5fc04b738e60d1dae
     crossDomain: 'true',
     dataType: 'json'
 })
@@ -14,7 +18,7 @@ $.ajax({
         // }
         console.log(progress);
         console.log(courseCategory);
-
+        $('#name').text(progress.Name);
         $('#degree_completion').append(
             $("<div class=\"h5 mb-0 mr-3 font-weight-bold text-gray-800\"></div>").text("" + progress.degree_completion + "%")
         );
