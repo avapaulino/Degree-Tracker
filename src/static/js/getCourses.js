@@ -6,7 +6,7 @@ $.ajax({
     dataType: 'json'
 })
 .done(function(data) { 
-    //console.log(data.body);
+    console.log(data.body);
     let json = JSON.parse(data.body);
     let course = json[0].Courses_taken;
     
