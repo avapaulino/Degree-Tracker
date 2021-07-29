@@ -22,6 +22,8 @@ $.ajax({
         console.log(course[0].Tag);
     }
 
+    console.log(json[0].Name);
+    $('#name').text(json[0].Name);
 
     $.each(course, function(i) {
         // appending body to #actualCourse
