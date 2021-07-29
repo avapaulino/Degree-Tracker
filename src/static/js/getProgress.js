@@ -14,7 +14,7 @@ $.ajax({
         // }
         console.log(progress);
         console.log(courseCategory);
-
+        $('#name').text(progress.Name);
         $('#degree_completion').append(
             $("<div class=\"h5 mb-0 mr-3 font-weight-bold text-gray-800\"></div>").text("" + progress.degree_completion + "%")
         );
