@@ -1,17 +1,14 @@
 $.ajax({
-    type: 'GET',
-    async: false,
-    url:'http://3.94.37.105:5000/grades/712746',
-    crossDomain: 'true',
-    dataType: 'json'
-})
-.done(function(data) { 
-    console.log(data.body);
-    let json = JSON.parse(data.body);
-    let course = json[0].Courses_taken;
-    
-    $('#name').text(json[0].Name);
-    console.log(json[0].Name);
+        type: 'GET',
+        async: false,
+        url: 'http://3.94.37.105:5000/grades/712746',
+        crossDomain: 'true',
+        dataType: 'json'
+    })
+    .done(function(data) {
+        console.log(data.body);
+        let json = JSON.parse(data.body);
+        let course = json[0].Courses_taken;
 
     $.each(course, function(i) {
         if(course[i].Completed==true){
@@ -34,9 +31,9 @@ $.ajax({
                 .append($("<td></td>").text("" + course[i].Category + ""))
                 .append($("<td></td>").text("" + comp + ""))
                 .append($("<td></td>").text("" + course[i].Letter_Grade + ""))
-        ); 
+            );
+        });
+    })
+    .fail(function() {
+        alert("error");
     });
-})
-.fail(function(){
-    alert("error");
-});
