@@ -6,12 +6,9 @@ $.ajax({
     dataType: 'json'
 })
     .done(function (data) {
-        console.log(data.body);
         let progress = JSON.parse(data.body);
         let courseCategory = progress.course_category_completion;
-        // if (console && console.log) {
-        //     console.log($('#get_progress')[0]);
-        // }
+        
         console.log(progress);
         console.log(courseCategory);
         $('#name').text(progress.Name);
