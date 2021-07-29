@@ -44,13 +44,13 @@
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
-                    <li class="navbar-nav ml-auto" no-arrow mx-1">
+                    <li class="navbar-nav ml-auto no-arrow mx-1">
                         <a class="nav-link align-items-left" href="index.html">
                             <span>Dashboard</span></a>
                     </li>
 
 
-                    <li class="navbar-nav ml-auto" no-arrow mx-1">
+                    <li class="navbar-nav ml-auto no-arrow mx-1">
                         <a class="nav-link align-items-left" href="grades.html">
                             <span>Final Grade</span></a>
                     </li>
@@ -176,15 +176,18 @@
                                             <tbody>
                                                 <tr>
                                                     <td>Core Courses</td>
-                                                    <td>15</td>
-                                                    <td>
+                                                    <td>16</td>
+                                                    <td id="cs_core">
                                                         <button type="button" class="btn btn-success btn-small"
-                                                            data-toggle="modal" data-target="#csci1110">
-                                                            CSCI 1110
-                                                        </button>
+                                                            data-toggle="modal" data-target="#csci1110">CSCI
+                                                            1110</button>
                                                         <button type="button" class="btn btn-success btn-small"
                                                             data-toggle="modal" data-target="#csci1170">
                                                             CSCI 1170
+                                                        </button>
+                                                        <button type="button" class="btn btn-success btn-small"
+                                                            data-toggle="modal" data-target="#csci1120">
+                                                            CSCI 1120
                                                         </button>
                                                         <button type="button" class="btn btn-success btn-small"
                                                             data-toggle="modal" data-target="#csci1800">
@@ -218,7 +221,7 @@
                                                             data-toggle="modal" data-target="#csci3101">
                                                             CSCI 3101
                                                         </button>
-                                                        <button type="button" class="btn btn-success btn-small"
+                                                        <button type="button" class="btn btn-outline-danger btn-small"
                                                             data-toggle="modal" data-target="#csci3110">
                                                             CSCI 3110
                                                         </button>
@@ -230,7 +233,7 @@
                                                             data-toggle="modal" data-target="#csci3130">
                                                             CSCI 3130
                                                         </button>
-                                                        <button type="button" class="btn btn-success btn-small"
+                                                        <button type="button" class="btn btn-outline-danger btn-small"
                                                             data-toggle="modal" data-target="#csci3136">
                                                             CSCI 3136
                                                         </button>
@@ -245,10 +248,14 @@
                                                 <tr>
                                                     <td>Math Courses</td>
                                                     <td>4</td>
-                                                    <td>
+                                                    <td id="math">
                                                         <button type="button" class="btn btn-success btn-small"
                                                             data-toggle="modal" data-target="#math1000">
                                                             MATH 1000
+                                                        </button>
+                                                        <button type="button" class="btn btn-success btn-small"
+                                                            data-toggle="modal" data-target="#math1010">
+                                                            MATH 1010
                                                         </button>
                                                         <button type="button" class="btn btn-success btn-small"
                                                             data-toggle="modal" data-target="#math1030">
@@ -263,151 +270,1190 @@
                                                             STAT 2060
                                                         </button>
                                                     </td>
-                                                    <td>4</td>
+                                                    <td>5</td>
                                                     <td>0</td>
                                                 </tr>
                                                 <tr>
                                                     <td>Science with Labs</td>
                                                     <td>2</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
+                                                    <td id="science_lab">
+                                                        <button type="button" class="btn btn-success btn-small"
+                                                            data-toggle="modal" data-target="#psyo1011">
+                                                            PSYO 1011
+                                                        </button>
+                                                        <button type="button" class="btn btn-success btn-small"
+                                                            data-toggle="modal" data-target="#psyo1012">
+                                                            PSYO 1012
+                                                        </button>
+                                                    </td>
+                                                    <td>2</td>
+                                                    <td>0</td>
                                                 </tr>
                                                 <tr>
                                                     <td>Humanities/Social Sciences</td>
                                                     <td>1</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
+                                                    <td id="science_sshuman">
+                                                        <button type="button" class="btn btn-success btn-small"
+                                                            data-toggle="modal" data-target="#gwst1010">
+                                                            GWST 1010
+                                                        </button>
+                                                    </td>
+                                                    <td>1</td>
+                                                    <td>0</td>
                                                 </tr>
                                                 <tr>
                                                     <td>Business, Economics, Science or Engineering</td>
                                                     <td>3</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
+                                                    <td id="science">
+                                                        <button type="button" class="btn btn-success btn-small"
+                                                            data-toggle="modal" data-target="#math2001">
+                                                            MATH 2001
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-small"
+                                                            data-toggle="modal" data-target="#stat2450">
+                                                            STAT 2450
+                                                        </button>
+                                                        <button type="button" class="btn btn-success btn-small"
+                                                            data-toggle="modal" data-target="#anat1010">
+                                                            ANAT 1010
+                                                        </button>
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>0</td>
                                                 </tr>
                                                 <tr>
                                                     <td>Elective Courses</td>
                                                     <td>8</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
+                                                    <td id="elective">
+                                                        <button type="button" class="btn btn-success btn-small"
+                                                            data-toggle="modal" data-target="#csci2170">
+                                                            CSCI 2170
+                                                        </button>
+                                                        <button type="button" class="btn btn-success btn-small"
+                                                            data-toggle="modal" data-target="#csci3172">
+                                                            CSCI 3172
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-small"
+                                                            data-toggle="modal" data-target="#csci4145">
+                                                            CSCI 4145
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-small"
+                                                            data-toggle="modal" data-target="#math2002">
+                                                            MATH 2002
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-small"
+                                                            data-toggle="modal" data-target="#math2120">
+                                                            MATH 2120
+                                                        </button>
+                                                        <button type="button" class="btn btn-success btn-small"
+                                                            data-toggle="modal" data-target="#csci2201">
+                                                            CSCI 2201
+                                                        </button>
+                                                        <button type="button" class="btn btn-success btn-small"
+                                                            data-toggle="modal" data-target="#csci1108">
+                                                            CSCI 1108
+                                                        </button>
+                                                        <button type="button" class="btn btn-success btn-small"
+                                                            data-toggle="modal" data-target="#csci1109">
+                                                            CSCI 1109
+                                                        </button>
+                                                    </td>
+                                                    <td>5</td>
+                                                    <td>3</td>
                                                 </tr>
                                                 <tr>
                                                     <td>CS Elective Courses</td>
                                                     <td>5</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
+                                                    <td id="cs_elective">
+                                                        <button type="button" class="btn btn-outline-danger btn-small"
+                                                            data-toggle="modal" data-target="#csci4171">
+                                                            CSCI 4171
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-small"
+                                                            data-toggle="modal" data-target="#csci4101">
+                                                            CSCI 4101
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-small"
+                                                            data-toggle="modal" data-target="#csci4116">
+                                                            CSCI 4116
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-small"
+                                                            data-toggle="modal" data-target="#csci4146">
+                                                            CSCI 4146
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-small"
+                                                            data-toggle="modal" data-target="#csci4174">
+                                                            CSCI 4174
+                                                        </button>
+                                                    </td>
+                                                    <td>0</td>
+                                                    <td>5</td>
                                                 </tr>
                                             </tbody>
                                         </table>
+                                        <div id="modal_info">
+                                            <!-- CSCI 1110 -->
+                                            <div class="modal fade" id="csci1110" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Intro to
+                                                                Computer Science</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close"> <span
+                                                                    aria-hidden="true">&times;</span> </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Code: CSCI 1110</p>
+                                                            <p>Term: Fall 2018</p>
+                                                            <p>Category: Core Courses</p>
+                                                            <p>Completed: Yes</p>
+                                                            <p>Letter Grade: A</p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- CSCI 1120 -->
+                                            <div class="modal fade" id="csci1120" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Intro to
+                                                                Computer Systems</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Code: CSCI 1120</p>
+                                                            <p>Term: Fall 2018</p>
+                                                            <p>Category: Core Courses</p>
+                                                            <p>Completed: Yes</p>
+                                                            <p>Letter Grade: B+</p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
 
-                                        <!-- CSCI 1110 -->
-                                        <div class="modal fade" id="csci1110" tabindex="-1" role="dialog"
-                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalLabel">Intro to Computer
-                                                            Science</h5>
-                                                        <button type="button" class="close" data-dismiss="modal"
-                                                            aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <p>Code: CSCI 1110</p>
-                                                        <p>Term: Fall 2018</p>
-                                                        <p>Category: Core Coures</p>
-                                                        <p>Completed: Yes</p>
-                                                        <p>Letter Grade: A</p>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary"
-                                                            data-dismiss="modal">Close</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- CSCI 1170 -->
-                                        <div class="modal fade" id="csci1170" tabindex="-1" role="dialog"
-                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalLabel">Intro to Web
-                                                            Design & Development</h5>
-                                                        <button type="button" class="close" data-dismiss="modal"
-                                                            aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <p>Code: CSCI 1170</p>
-                                                        <p>Term: Fall 2018</p>
-                                                        <p>Category: Core Coures</p>
-                                                        <p>Completed: Yes</p>
-                                                        <p>Letter Grade: A-</p>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary"
-                                                            data-dismiss="modal">Close</button>
+                                            <!-- CSCI 1170 -->
+                                            <div class="modal fade" id="csci1170" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Intro to Web
+                                                                Design & Development</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Code: CSCI 1170</p>
+                                                            <p>Term: Fall 2018</p>
+                                                            <p>Category: Core Courses</p>
+                                                            <p>Completed: Yes</p>
+                                                            <p>Letter Grade: A</p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <!-- CSCI 1800 -->
-                                        <div class="modal fade" id="csci1800" tabindex="-1" role="dialog"
-                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalLabel">Society Tech
-                                                            before Automation</h5>
-                                                        <button type="button" class="close" data-dismiss="modal"
-                                                            aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <p>Code: CSCI 1800</p>
-                                                        <p>Term: Fall 2018</p>
-                                                        <p>Category: Core Coures</p>
-                                                        <p>Completed: Yes</p>
-                                                        <p>Letter Grade: B</p>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary"
-                                                            data-dismiss="modal">Close</button>
+                                            <!-- CSCI 1800 -->
+                                            <div class="modal fade" id="csci1800" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Society Tech
+                                                                before Automation</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Code: CSCI 1800</p>
+                                                            <p>Term: Fall 2018</p>
+                                                            <p>Category: Core Coures</p>
+                                                            <p>Completed: Yes</p>
+                                                            <p>Letter Grade: B</p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <!-- CSCI 1801 -->
-                                        <div class="modal fade" id="csci1801" tabindex="-1" role="dialog"
-                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalLabel">Case Studies in
-                                                            Comp & Society</h5>
-                                                        <button type="button" class="close" data-dismiss="modal"
-                                                            aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
+
+                                            <!-- CSCI 1801 -->
+                                            <div class="modal fade" id="csci1801" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Case Studies
+                                                                in
+                                                                Comp & Society</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Code: CSCI 1801</p>
+                                                            <p>Term: Winter 2020</p>
+                                                            <p>Category: Core Coures</p>
+                                                            <p>Completed: Yes</p>
+                                                            <p>Letter Grade: B+</p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
                                                     </div>
-                                                    <div class="modal-body">
-                                                        <p>Code: CSCI 1801</p>
-                                                        <p>Term: Winter 2020</p>
-                                                        <p>Category: Core Coures</p>
-                                                        <p>Completed: Yes</p>
-                                                        <p>Letter Grade: B+</p>
+                                                </div>
+                                            </div>
+
+                                            <!-- CSCI 2100 -->
+                                            <div class="modal fade" id="csci2100" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Comm Skills:
+                                                                Oral/Written</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Code: CSCI 2100</p>
+                                                            <p>Term: Winter 2019</p>
+                                                            <p>Category: Core Courses</p>
+                                                            <p>Completed: Yes</p>
+                                                            <p>Letter Grade: A-</p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
                                                     </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary"
-                                                            data-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+
+                                            <!-- MATH 1000 -->
+                                            <div class="modal fade" id="math1000" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Differential
+                                                                & Integral Calc I</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Code: MATH 1000</p>
+                                                            <p>Term: Winter 2019</p>
+                                                            <p>Category: Math</p>
+                                                            <p>Completed: Yes</p>
+                                                            <p>Letter Grade: A+</p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- CSCI 2141 -->
+                                            <div class="modal fade" id="csci2141" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Intro to
+                                                                Database Systems</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Code: CSCI 2141</p>
+                                                            <p>Term: Winter 2019</p>
+                                                            <p>Category: Core Courses</p>
+                                                            <p>Completed: Yes</p>
+                                                            <p>Letter Grade: B</p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- CSCI 2121 -->
+                                            <div class="modal fade" id="csci2122" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Intro to
+                                                                Comp Org/Assembly Language</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Code: CSCI 2122</p>
+                                                            <p>Term: Winter 2019</p>
+                                                            <p>Category: Core Courses</p>
+                                                            <p>Completed: Yes</p>
+                                                            <p>Letter Grade: B+</p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- CSCI 2134 -->
+                                            <div class="modal fade" id="csci2134" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Software
+                                                                Development</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Code: CSCI 2134</p>
+                                                            <p>Term: Winter 2019</p>
+                                                            <p>Category: Core Courses</p>
+                                                            <p>Completed: Yes</p>
+                                                            <p>Letter Grade: A+</p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- CSCI 2110 -->
+                                            <div class="modal fade" id="csci2110" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Data
+                                                                Structures & Algorithms</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Code: CSCI 2110</p>
+                                                            <p>Term: Fall 2019</p>
+                                                            <p>Category: Core Courses</p>
+                                                            <p>Completed: Yes</p>
+                                                            <p>Letter Grade: A</p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- PSYO 1011 -->
+                                            <div class="modal fade" id="psyo1011" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Intro to
+                                                                Psych & Nesc I</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Code: PSYO 1011</p>
+                                                            <p>Term: Fall 2019</p>
+                                                            <p>Category: Science with Lab</p>
+                                                            <p>Completed: Yes</p>
+                                                            <p>Letter Grade: B-</p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- CSCI 2170 -->
+                                            <div class="modal fade" id="csci2170" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Server
+                                                                Side Scripting</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Code: CSCI 2170</p>
+                                                            <p>Term: Fall 2019</p>
+                                                            <p>Category: Elective</p>
+                                                            <p>Completed: Yes</p>
+                                                            <p>Letter Grade: A-</p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- MATH 1010 -->
+                                            <div class="modal fade" id="math1010" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">
+                                                                Differential & Integral Calc II</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Code: MATH 1010</p>
+                                                            <p>Term: Winter 2020</p>
+                                                            <p>Category: Math</p>
+                                                            <p>Completed: Yes</p>
+                                                            <p>Letter Grade: A</p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- STAT 2060 -->
+                                            <div class="modal fade" id="stat2060" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Intro
+                                                                to Probability & Stats</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Code: STAT 2060</p>
+                                                            <p>Term: Winter 2020</p>
+                                                            <p>Category: Math</p>
+                                                            <p>Completed: Yes</p>
+                                                            <p>Letter Grade: A-</p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- PSYO 1012 -->
+                                            <div class="modal fade" id="psyo1012" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Intro to Psyo & Nesc II</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Code: PSYO 1012</p>
+                                                            <p>Term: Winter 2020</p>
+                                                            <p>Category: Science with Lab</p>
+                                                            <p>Completed: Yes</p>
+                                                            <p>Letter Grade: B</p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- CSCI 3101 -->
+                                            <div class="modal fade" id="csci3101" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Societal, Ethical, Professional Issues in CSCI</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Code: CSCI 3101</p>
+                                                            <p>Term: Winter 2020</p>
+                                                            <p>Category: Core Courses</p>
+                                                            <p>Completed: Yes</p>
+                                                            <p>Letter Grade: A</p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- CSCI 3171 -->
+                                            <div class="modal fade" id="csci3171" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Network Computing</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Code: CSCI 3171</p>
+                                                            <p>Term: Fall 2020</p>
+                                                            <p>Category: Core Courses</p>
+                                                            <p>Completed: Yes</p>
+                                                            <p>Letter Grade: B+</p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- CSCI 3120 -->
+                                            <div class="modal fade" id="csci3120" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Operating Systems</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Code: CSCI 3120</p>
+                                                            <p>Term: Fall 2020</p>
+                                                            <p>Category: Core Courses</p>
+                                                            <p>Completed: Yes</p>
+                                                            <p>Letter Grade: B-</p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- CSCI 3130 -->
+                                            <div class="modal fade" id="csci3130" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Software Engineering</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Code: CSCI 3130</p>
+                                                            <p>Term: Fall 2020</p>
+                                                            <p>Category: Core Courses</p>
+                                                            <p>Completed: Yes</p>
+                                                            <p>Letter Grade: A</p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- CSCI 3172 -->
+                                            <div class="modal fade" id="csci3172" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Web-Centric Computing</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Code: CSCI 3172</p>
+                                                            <p>Term: Fall 2020</p>
+                                                            <p>Category: Elective</p>
+                                                            <p>Completed: Yes</p>
+                                                            <p>Letter Grade: B+</p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- CSCI 4145 -->
+                                            <div class="modal fade" id="csci4145" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Cloud Computing</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Code: CSCI 4145</p>
+                                                            <p>Term: Summer 2021</p>
+                                                            <p>Category: Elective</p>
+                                                            <p>Completed: No</p>
+                                                            <p>Letter Grade: </p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- MATH 2001 -->
+                                            <div class="modal fade" id="math2001" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Intermediate Calculus I</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Code: MATH 2001</p>
+                                                            <p>Term: Summer 2021</p>
+                                                            <p>Category: Science</p>
+                                                            <p>Completed: Yes</p>
+                                                            <p>Letter Grade: A</p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- MATH 2002 -->
+                                            <div class="modal fade" id="math2002" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Intermediate Calculus II</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Code: MATH 2002</p>
+                                                            <p>Term: Summer 2021</p>
+                                                            <p>Category: Elective</p>
+                                                            <p>Completed: No</p>
+                                                            <p>Letter Grade: </p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- STAT 2450 -->
+                                            <div class="modal fade" id="stat2450" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Intro to Data Mining with R</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Code: STAT 2450</p>
+                                                            <p>Term: Summer 2021</p>
+                                                            <p>Category: Elective</p>
+                                                            <p>Completed: No</p>
+                                                            <p>Letter Grade: </p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- CSCI 3110 -->
+                                            <div class="modal fade" id="csci3110" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Design & Analysis of Algorithms I</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Code: CSCI 3110</p>
+                                                            <p>Term: Fall 2021</p>
+                                                            <p>Category: Core Course</p>
+                                                            <p>Completed: No</p>
+                                                            <p>Letter Grade: </p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- CSCI 4171 -->
+                                            <div class="modal fade" id="csci4171" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Networks and Communication</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Code: CSCI 4171</p>
+                                                            <p>Term: Fall 2021</p>
+                                                            <p>Category: CS Elective</p>
+                                                            <p>Completed: No</p>
+                                                            <p>Letter Grade: </p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- MATH 2120 -->
+                                            <div class="modal fade" id="math2120" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Methods of Ordinary & Different Equations</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Code: MATH 210</p>
+                                                            <p>Term: Fall 2021</p>
+                                                            <p>Category: Elective</p>
+                                                            <p>Completed: No</p>
+                                                            <p>Letter Grade: </p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- CSCI 4101 -->
+                                            <div class="modal fade" id="csci4101" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Privacy & Access for the IT Professional </h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Code: CSCI 4101</p>
+                                                            <p>Term: Fall 2021</p>
+                                                            <p>Category: CS Elective</p>
+                                                            <p>Completed: No</p>
+                                                            <p>Letter Grade: </p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- CSCI 4116 -->
+                                            <div class="modal fade" id="csci4116" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Cryptography</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Code: CSCI 4116</p>
+                                                            <p>Term: Winter 2022</p>
+                                                            <p>Category: CS Elective</p>
+                                                            <p>Completed: No</p>
+                                                            <p>Letter Grade: </p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- CSCI 4146 -->
+                                            <div class="modal fade" id="csci4146" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Mobile Computing</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Code: CSCI 4146</p>
+                                                            <p>Term: Winter 2022</p>
+                                                            <p>Category: CS Elective</p>
+                                                            <p>Completed: No</p>
+                                                            <p>Letter Grade: </p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- CSCI 4174 -->
+                                            <div class="modal fade" id="csci4174" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Network Security</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Code: CSCI 4174</p>
+                                                            <p>Term: Winter 2022</p>
+                                                            <p>Category: CS Elective</p>
+                                                            <p>Completed: No</p>
+                                                            <p>Letter Grade: </p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- CSCI 3136 -->
+                                            <div class="modal fade" id="csci3136" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Principles of Programming Language</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Code: CSCI 3136</p>
+                                                            <p>Term: Winter 2022</p>
+                                                            <p>Category: Core Courses</p>
+                                                            <p>Completed: No</p>
+                                                            <p>Letter Grade: </p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- CSCI 1315 -->
+                                            <div class="modal fade" id="csci1315" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Discrete Math for CS</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Code: CSCI 1315</p>
+                                                            <p>Term: Fall 2021</p>
+                                                            <p>Category: Math</p>
+                                                            <p>Completed: Yes</p>
+                                                            <p>Letter Grade: A</p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- CSCI 2201 -->
+                                            <div class="modal fade" id="csci2201" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Introduction to Info Security</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Code: CSCI 2201</p>
+                                                            <p>Term: Winter 2022</p>
+                                                            <p>Category: Elective</p>
+                                                            <p>Completed: No</p>
+                                                            <p>Letter Grade: </p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- GWST 1010 -->
+                                            <div class="modal fade" id="gwst1010" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Intro to Gender & Women's Studies</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Code: GWST 1010</p>
+                                                            <p>Term: Fall 2020</p>
+                                                            <p>Category: Social Sciences/Humanities</p>
+                                                            <p>Completed: Yes</p>
+                                                            <p>Letter Grade: A-</p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- ANAT 1010 -->
+                                            <div class="modal fade" id="anat1010" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Intro to Anatomy</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Code: ANAT 1010</p>
+                                                            <p>Term: Winter 2021</p>
+                                                            <p>Category: Science</p>
+                                                            <p>Completed: Yes</p>
+                                                            <p>Letter Grade: A-</p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- CSCI 1108 -->
+                                            <div class="modal fade" id="csci1108" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Experimental Robotics</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Code: CSCI 1108</p>
+                                                            <p>Term: Winter 2021</p>
+                                                            <p>Category: Elective</p>
+                                                            <p>Completed: Yes</p>
+                                                            <p>Letter Grade: A</p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- CSCI 1109 -->
+                                            <div class="modal fade" id="csci1109" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Practical Data Science</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Code: CSCI 1109</p>
+                                                            <p>Term: Winter 2021</p>
+                                                            <p>Category: Elective</p>
+                                                            <p>Completed: Yes</p>
+                                                            <p>Letter Grade: A-</p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -417,27 +1463,28 @@
                             </div>
                         </div>
                     </div>
-
-
-                    <!-- /.container-fluid -->
-
                 </div>
+
+
+                <!-- /.container-fluid -->
+
             </div>
+        </div>
 
-            <!-- End of Main Content -->
+        <!-- End of Main Content -->
 
-            <!-- Footer -->
-            <!-- <footer class="sticky-footer bg-white">
+        <!-- Footer -->
+        <!-- <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
                         <span>Copyright &copy; Your Website 2020</span>
                     </div>
                 </div>
             </footer> -->
-            <!-- End of Footer -->
+        <!-- End of Footer -->
 
-        </div>
-        <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Content Wrapper -->
 
     </div>
     <!-- End of Page Wrapper -->

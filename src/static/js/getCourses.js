@@ -1,7 +1,7 @@
 $.ajax({
     type: 'GET',
     async: false,
-    url:'http://3.94.37.105:5000/grades/712744',
+    url:'http://3.94.37.105:5000/grades/712746',
     crossDomain: 'true',
     dataType: 'json'
 })
