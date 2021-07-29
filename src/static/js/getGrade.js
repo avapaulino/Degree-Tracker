@@ -26,6 +26,12 @@ $.ajax({
     $('#name').text(json[0].Name);
 
     $.each(course, function(i) {
+        if (course[i].Year == null){
+            year = course[i].NewValue;
+        }
+        else{
+            year = course[i].Year;
+        }
         // appending body to #actualCourse
         $('#actualCourse').append(
             $("<tr></tr>")
@@ -34,7 +40,7 @@ $.ajax({
                 .append($("<td></td>").text("" + course[i].Name + ""))
                 .append($("<td></td>").text("" + course[i].CRN + ""))
                 .append($("<td></td>").text("" + course[i].Professor + ""))
-                .append($("<td></td>").text("" + course[i].Year + " " + course[i].Term + ""))
+                .append($("<td></td>").text("" + year + " " + course[i].Term + ""))
                 .append($("<td></td>").text("" + course[i].GPA + ""))
                 .append($("<td></td>").text("" + course[i].Letter_Grade + ""))
         ); 

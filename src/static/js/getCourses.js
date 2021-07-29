@@ -20,10 +20,16 @@ $.ajax({
         else{
             var comp = "No";
         }
+        if (course[i].Year == null){
+            year = course[i].NewValue;
+        }
+        else{
+            year = course[i].Year;
+        }
         $('#get_courses').append(
             $("<tr></tr>")
                 .append($("<td></td>").text("" + course[i].Name + ""))
-                .append($("<td></td>").text("" + course[i].Year + ""))
+                .append($("<td></td>").text("" + year + ""))
                 .append($("<td></td>").text("" + course[i].Term + ""))
                 .append($("<td></td>").text("" + course[i].Category + ""))
                 .append($("<td></td>").text("" + comp + ""))
